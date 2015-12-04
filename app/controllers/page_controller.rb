@@ -1,22 +1,16 @@
 class PageController < ApplicationController
   def home
-    @appVar = "test" 
-      
-      
+    @appVar = "test"   
   end
   
   def about
     @appVar = "test" 
-      
-      
+
   end
   
   def contact
-    @appVar = "test" 
-      
-      
+    @appVar = "test"  
   end    
-    
     
 end
 

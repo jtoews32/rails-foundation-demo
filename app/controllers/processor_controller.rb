@@ -2,7 +2,7 @@ class ProcessorController < ApplicationController
   
 =begin
   def process
-    @whatTheFuck = 1;
+    @whatThe = 1;
   end
 =end 
   
