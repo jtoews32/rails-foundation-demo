@@ -1,0 +1,53 @@
+<%= form_for(@two_test) do |f| %>
+  <% if @two_test.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@two_test.errors.count, "error") %> prohibited this two_test from being saved:</h2>
+
+      <ul>
+      <% @two_test.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :submission_type %><br />
+    <%= f.text_field :submission_type %>
+  </div>
+  <div class="field">
+    <%= f.label :live_test_flat %><br />
+    <%= f.text_field :live_test_flat %>
+  </div>
+  <div class="field">
+    <%= f.label :cik %><br />
+    <%= f.text_field :cik %>
+  </div>
+  <div class="field">
+    <%= f.label :ccc %><br />
+    <%= f.text_field :ccc %>
+  </div>
+  <div class="field">
+    <%= f.label :return_copy_flag %><br />
+    <%= f.text_field :return_copy_flag %>
+  </div>
+  <div class="field">
+    <%= f.label :override_internal_flag %><br />
+    <%= f.text_field :override_internal_flag %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_name %><br />
+    <%= f.text_field :contact_name %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_phone_number %><br />
+    <%= f.text_field :contact_phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_email_address %><br />
+    <%= f.text_field :contact_email_address %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+ 
+    <div class="row">
+      <div class="large-6 columns">
+
+        <ul class="button-group">
+          <li><a href="/" class="button secondary">Home</a></li>
+          <li><a href="/contact" class="button secondary">Contact</a></li>
+            <li><a href="/about" class="button secondary">About</a></li>
+        </ul>
+
+      </div>
+      <div class="large-6 columns" align="right">
+          <form action="/handle?login=test" method="post"> 
+        <ul class="button-group">
+
+           <li><input type="text" placeholder="Email Address"></li>
+           <li><input type="password" placeholder="Password"></li>
+           <li> <input value="Login" type="submit" class="tiny button"  />   </li>
+           
+        </ul>
+            </form> 
+       </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+
+
+       <%= yield %>
+
+
+        <footer class="row">
+          <div class="large-12 columns"><hr/>
+            <div class="row">
+              <div class="large-6 columns">
+                <p>&copy; Copyright no one at all. Go to town.</p>
+              </div>
+              <div class="large-6 columns">
+                <ul class="inline-list right">
+                  <li><a href="#">Link 1</a></li>
+                  <li><a href="#">Link 2</a></li>
+                  <li><a href="#">Link 3</a></li>
+                  <li><a href="#">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+
+  </body>
+</html>
+
+
+
+

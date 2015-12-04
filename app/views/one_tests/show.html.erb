@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Submission type:</b>
+  <%= @one_test.submission_type %>
+</p>
+
+<p>
+  <b>Live test flat:</b>
+  <%= @one_test.live_test_flat %>
+</p>
+
+<p>
+  <b>Cik:</b>
+  <%= @one_test.cik %>
+</p>
+
+<p>
+  <b>Ccc:</b>
+  <%= @one_test.ccc %>
+</p>
+
+<p>
+  <b>Return copy flag:</b>
+  <%= @one_test.return_copy_flag %>
+</p>
+
+<p>
+  <b>Override internal flag:</b>
+  <%= @one_test.override_internal_flag %>
+</p>
+
+<p>
+  <b>Contact name:</b>
+  <%= @one_test.contact_name %>
+</p>
+
+<p>
+  <b>Contact phone number:</b>
+  <%= @one_test.contact_phone_number %>
+</p>
+
+<p>
+  <b>Contact email address:</b>
+  <%= @one_test.contact_email_address %>
+</p>
+
+
+<%= link_to 'Edit', edit_one_test_path(@one_test) %> |
+<%= link_to 'Back', one_tests_path %>

@@ -1,0 +1,39 @@
+<h1>Listing two_tests</h1>
+
+<table>
+  <tr>
+    <th>Submission type</th>
+    <th>Live test flat</th>
+    <th>Cik</th>
+    <th>Ccc</th>
+    <th>Return copy flag</th>
+    <th>Override internal flag</th>
+    <th>Contact name</th>
+    <th>Contact phone number</th>
+    <th>Contact email address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @two_tests.each do |two_test| %>
+  <tr>
+    <td><%= two_test.submission_type %></td>
+    <td><%= two_test.live_test_flat %></td>
+    <td><%= two_test.cik %></td>
+    <td><%= two_test.ccc %></td>
+    <td><%= two_test.return_copy_flag %></td>
+    <td><%= two_test.override_internal_flag %></td>
+    <td><%= two_test.contact_name %></td>
+    <td><%= two_test.contact_phone_number %></td>
+    <td><%= two_test.contact_email_address %></td>
+    <td><%= link_to 'Show', two_test %></td>
+    <td><%= link_to 'Edit', edit_two_test_path(two_test) %></td>
+    <td><%= link_to 'Destroy', two_test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Two test', new_two_test_path %>

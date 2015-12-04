@@ -1,0 +1,39 @@
+<h1>Listing one_tests</h1>
+
+<table>
+  <tr>
+    <th>Submission type</th>
+    <th>Live test flat</th>
+    <th>Cik</th>
+    <th>Ccc</th>
+    <th>Return copy flag</th>
+    <th>Override internal flag</th>
+    <th>Contact name</th>
+    <th>Contact phone number</th>
+    <th>Contact email address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @one_tests.each do |one_test| %>
+  <tr>
+    <td><%= one_test.submission_type %></td>
+    <td><%= one_test.live_test_flat %></td>
+    <td><%= one_test.cik %></td>
+    <td><%= one_test.ccc %></td>
+    <td><%= one_test.return_copy_flag %></td>
+    <td><%= one_test.override_internal_flag %></td>
+    <td><%= one_test.contact_name %></td>
+    <td><%= one_test.contact_phone_number %></td>
+    <td><%= one_test.contact_email_address %></td>
+    <td><%= link_to 'Show', one_test %></td>
+    <td><%= link_to 'Edit', edit_one_test_path(one_test) %></td>
+    <td><%= link_to 'Destroy', one_test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New One test', new_one_test_path %>

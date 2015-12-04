@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  submission_type: MyString
+  live_test_flat: MyString
+  cik: MyString
+  ccc: MyString
+  return_copy_flag: MyString
+  override_internal_flag: MyString
+  contact_name: MyString
+  contact_phone_number: MyString
+  contact_email_address: MyString
+
+two:
+  submission_type: MyString
+  live_test_flat: MyString
+  cik: MyString
+  ccc: MyString
+  return_copy_flag: MyString
+  override_internal_flag: MyString
+  contact_name: MyString
+  contact_phone_number: MyString
+  contact_email_address: MyString
