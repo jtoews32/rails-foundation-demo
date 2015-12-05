@@ -1,6 +1,8 @@
 RailsApplication2::Application.routes.draw do
 
 
+  get "users/new"
+
   resources :two_tests
   resources :one_tests
 
