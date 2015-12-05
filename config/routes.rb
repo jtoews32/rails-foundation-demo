@@ -1,5 +1,6 @@
 RailsApplication2::Application.routes.draw do
 
+
   resources :two_tests
   resources :one_tests
 
@@ -7,6 +8,11 @@ RailsApplication2::Application.routes.draw do
   
   root :to => 'page#home' 
   
+  get "static_pages/home"  
+  get "static_pages/help"
+
+
+
   get "about" => "page#about"
   get "contact" => "page#contact"
   
