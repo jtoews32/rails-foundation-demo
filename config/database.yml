@@ -12,7 +12,9 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: seeq
+  host: 127.0.0.1
+  port: 3306
+  database: selenous
   pool: 5
   username: root
   password: admin
@@ -25,7 +27,9 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: seeq
+  database: selenous
+  host: 127.0.0.1
+  port: 3306
   pool: 5
   username: root
   password: admin
@@ -35,7 +39,9 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: seeq
+  host: 127.0.0.1
+  port: 3306
+  database: selenous
   pool: 5
   username: root
   password: admin
