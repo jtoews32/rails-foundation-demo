@@ -10,7 +10,8 @@ gem 'yaml_db'
 gem 'foundation-rails'
 # gem 'rspec-rails',      ">= 2.0.0.beta"
 gem "minitest"
-
+gem 'bcrypt'
+gem 'bcrypt-ruby'
 gem 'rspec'
 
 # Gems used only for assets and not required
