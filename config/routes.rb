@@ -1,30 +1,33 @@
 RailsApplication2::Application.routes.draw do
 
-
-  get "users/new"
+#  
 
   resources :two_tests
   resources :one_tests
-
-  resources :works
+  resources :users
+ # resources :works
   
   root :to => 'page#home' 
   
   get "static_pages/home"  
   get "static_pages/help"
 
-
-
+  
   get "about" => "page#about"
   get "contact" => "page#contact"
   
   get "one" => "one_tests#index" 
   
-  get "work1" => "work#index"
-  get "work2" => "work#new"
   
-  get "handle" => "processor#handler" 
-  post "handle" => "processor#handler" 
+  get "users/new"
+  
+  
+  
+ # get "work1" => "work#index"
+ # get "work2" => "work#new"
+  
+ # get "handle" => "processor#handler" 
+ # post "handle" => "processor#handler" 
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
