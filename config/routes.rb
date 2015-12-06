@@ -1,4 +1,4 @@
-RailsApplication2::Application.routes.draw do
+RailsFoundationDemo::Application.routes.draw do
 
 #  
 
