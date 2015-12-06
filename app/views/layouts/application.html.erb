@@ -1,68 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= full_title(yield(:title)) %></title>
+		<title><%= full_title(yield(:title)) %></title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
+		<%= stylesheet_link_tag    "application" %>
+		<%= javascript_include_tag "vendor/modernizr" %>
+		<%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+	</head>
 
-  <body>
- 	<div class="top_space"></div>
-    <div class="row">
-      <div class="large-6 columns">
+	<body>
+		<div class="top_space"></div>
+		<div class="row">
+			<div class="large-6 columns">
+				<ul class="button-group">
+					<li>
+						<a href="/" class="button secondary">Home</a>
+					</li>
+					<li>
+						<a href="/contact" class="button secondary">Contact</a>
+					</li>
+					<li>
+						<a href="/about" class="button secondary">About</a>
+					</li>
+				</ul>
 
-        <ul class="button-group">
-          <li><a href="/" class="button secondary">Home</a></li>
-          <li><a href="/contact" class="button secondary">Contact</a></li>
-            <li><a href="/about" class="button secondary">About</a></li>
-        </ul>
+			</div>
+			<div class="large-6 columns" align="right">
+				
+				<form action="/handle?login=test" method="post">
+					<ul class="button-group">
 
-      </div>
-      <div class="large-6 columns" align="right">
-          <form action="/handle?login=test" method="post"> 
-        <ul class="button-group">
+						<li>
+							<input type="text" placeholder="Email Address">
+						</li>
+						<li>
+							<input type="password" placeholder="Password">
+						</li>
+						<li>
+							<input value="Login" type="submit" class="tiny button"  />
+						</li>
 
-           <li><input type="text" placeholder="Email Address"></li>
-           <li><input type="password" placeholder="Password"></li>
-           <li> <input value="Login" type="submit" class="tiny button"  />   </li>
-           
-        </ul>
-            </form> 
-       </div>
-    </div>
+					</ul>
+					<%= link_to 'Forget Username', 'users/new' %><br>
+					<%= link_to 'Create Account', 'users/new' %>
+				</form>
+			</div>
 
-    <div class="row">
-      <div class="large-12 columns">
+		</div>
 
+		<div class="row">
+			<div class="large-12 columns">
 
-       <%= yield %>
+				<%= yield %>
 
+				<footer class="row">
+					<div class="large-12 columns">
+						<hr/>
+						<div class="row">
+							<div class="large-6 columns">
+								<p>
+									&copy; Copyright no one at all. Go to town.
+								</p>
+							</div>
+							<div class="large-6 columns">
+								<%= render 'layouts/footer' %>
 
-        <footer class="row">
-          <div class="large-12 columns"><hr/>
-            <div class="row">
-              <div class="large-6 columns">
-                <p>&copy; Copyright no one at all. Go to town.</p>
-              </div>
-              <div class="large-6 columns">
-              	<%= render 'layouts/footer' %>
-              	
-				<%= debug(params) if Rails.env.development? %>
-              </div>
-            </div>
-          </div>
-        </footer>
+								<%= debug(params) if Rails.env.development? %>
+							</div>
+						</div>
+					</div>
+				</footer>
 
-      </div>
-    </div>
-	
-  </body>
+			</div>
+		</div>
+
+	</body>
 </html>
 
 
